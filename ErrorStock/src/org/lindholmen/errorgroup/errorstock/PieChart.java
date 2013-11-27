@@ -10,6 +10,14 @@ import android.content.Intent;
 import android.graphics.Color;
 
 public class PieChart {
+	/**
+	 * 
+	 * @param context
+	 * @param title Title of chart
+	 * @param series All the values for the chart
+	 * @param colors Colors to be used for the chart
+	 * @return
+	 */
 	public Intent getIntent(Context context, String title, CategorySeries series, int[] colors){
 		/**int[] values = {1,2,3,4,5};
 		CategorySeries series = new CategorySeries("Pie Chart");
@@ -28,7 +36,7 @@ public class PieChart {
 		}
 		//renderer.setChartTitle("Pie Chart Test");
 		renderer.setLabelsColor(Color.BLACK);
-		renderer.setChartTitleTextSize(7);
+		renderer.setChartTitleTextSize(12);
 		renderer.setZoomButtonsVisible(true);
 
 		Intent intent = ChartFactory.getPieChartIntent(context, series, renderer, title);
